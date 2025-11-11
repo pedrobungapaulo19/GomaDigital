@@ -1,0 +1,320 @@
+/* Paleta de Cores da Goma Digital */
+:root {
+    --color-primary: #007bff; /* Azul Vibrante */
+    --color-secondary: #28a745; /* Verde Crescimento */
+    --color-tertiary: #6f42c1; /* Roxo Criativo */
+    --color-dark: #343a40;
+    --color-light: #f8f9fa;
+    --color-text: #495057;
+}
+
+/* Base e Tipografia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--color-dark);
+    line-height: 1.6;
+    background-color: var(--color-light);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h2, h3 {
+    color: var(--color-dark);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container img{
+    Width: 20%;
+    border-radius: 20px;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--color-text);
+    margin-bottom: 50px;
+    font-size: 1.1em;
+}
+
+/* --- Componentes --- */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: var(--color-secondary);
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-nav {
+    padding: 8px 15px;
+}
+
+/* --- 1. Navegação --- */
+header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+}
+
+.logo {
+    font-size: 1.8em;
+    color: var(--color-primary);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--color-dark);
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: var(--color-primary);
+}
+
+.menu-toggle {
+    display: none; /* Oculto no desktop */
+    font-size: 1.5em;
+    cursor: pointer;
+    color: var(--color-dark);
+}
+
+/* --- 2. HERO SECTION / CARROSSEL --- */
+.hero-section {
+    position: relative;
+    height: 70vh;
+    min-height: 400px;
+    overflow: hidden;
+}
+
+.hero-carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Sombra escura para o texto */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-overlay h2 {
+    font-size: 3em;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.hero-overlay p {
+    font-size: 1.2em;
+    color: #ddd;
+    margin-bottom: 30px;
+}
+
+/* --- 3. SEÇÃO DE SERVIÇOS --- */
+.servicos-section {
+    padding: 80px 0;
+}
+
+.servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.servico-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servico-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.servico-card i {
+    font-size: 3em;
+    margin-bottom: 15px;
+    /* Cores dos ícones baseadas na paleta */
+    color: var(--color-primary); 
+}
+
+.servico-card h4 {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+/* --- 4. SEÇÃO DE CONTATO --- */
+.contato-section {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contato-section h3 {
+    color: white;
+    font-size: 2em;
+}
+
+.contato-section p {
+    margin-bottom: 30px;
+}
+
+.contato-section .btn-secondary {
+    background-color: var(--color-secondary);
+}
+
+.contato-section .btn-secondary:hover {
+    background-color: #218838;
+}
+
+/* --- 5. RODAPÉ --- */
+footer {
+    background-color: var(--color-dark);
+    color: #ccc;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    color: white;
+    margin-left: 15px;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--color-primary);
+}
+
+
+/* ======================================= */
+/* RESPONSIVIDADE (MOBILE)       */
+/* ======================================= */
+
+@media (max-width: 768px) {
+    /* Navegação */
+    .nav-links {
+        display: none; /* Oculta links no mobile por padrão */
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 60px; /* Abaixo do header */
+        left: 0;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+        padding-bottom: 10px;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block; /* Mostra o ícone de menu no mobile */
+    }
+
+    /* Hero Section */
+    .hero-overlay h2 {
+        font-size: 2em;
+    }
+    
+    .hero-overlay p {
+        font-size: 1em;
+    }
+
+    /* Rodapé */
+    footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    footer p {
+        margin-bottom: 10px;
+    }
+    
+    .social-links {
+        margin-top: 10px;
+    }
+}
